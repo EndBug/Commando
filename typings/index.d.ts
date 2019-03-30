@@ -1,15 +1,15 @@
 declare module 'sqlite' {
-	export interface Database {}
-	export interface Statement {}
+	export interface Database { }
+	export interface Statement { }
 }
 
 declare module 'SyncSqlite' {
-	export interface Database {}
-	export interface Statement {}
+	export interface Database { }
+	export interface Statement { }
 }
 
 declare module 'discord.js-commando' {
-	import { Channel, Client, ClientOptions, Collection, DMChannel, Emoji, Guild, GuildChannel, GuildMember, GuildResolvable, Message, MessageAttachment, MessageEmbed, MessageMentions, MessageOptions, MessageReaction, PermissionResolvable, PermissionString, ReactionEmoji, Role, Snowflake, StringResolvable, TextChannel, User, UserResolvable, VoiceStatus, Webhook } from 'discord.js';
+	import { Channel, Client, ClientOptions, Collection, DMChannel, Emoji, Guild, GuildChannel, GuildMember, GuildResolvable, Message, MessageAttachment, MessageEmbed, MessageMentions, MessageOptions, MessageReaction, PermissionResolvable, PermissionString, ReactionEmoji, Role, Snowflake, StringResolvable, TextChannel, User, UserResolvable, VoiceStatus as VoiceState, Webhook } from 'discord.js';
 	import { Database as SQLiteDatabase, Statement as SQLiteStatement } from 'sqlite';
 	import { Database as SyncSQLiteDatabase, Statement as SyncSQLiteStatement } from 'SyncSqlite';
 

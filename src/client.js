@@ -31,6 +31,9 @@ class CommandoClient extends discord.Client {
 		if(typeof options.nonCommandEditable === 'undefined') options.nonCommandEditable = true;
 		if(typeof options.unknownCommandResponse === 'undefined') options.unknownCommandResponse = true;
 		super(options);
+		
+		/** Just make it public already! */
+		this.publicResolver = this.resolver
 
 		/**
 		 * The client's command registry

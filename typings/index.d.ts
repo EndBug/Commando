@@ -9,7 +9,7 @@ declare module 'SyncSqlite' {
 }
 
 declare module 'discord.js-commando' {
-	import { Channel, Client, ClientOptions, Collection, DMChannel, Emoji, Guild, GuildChannel, GuildMember, GuildResolvable, Message, MessageAttachment, MessageEmbed, MessageMentions, MessageOptions, MessageReaction, PermissionResolvable, PermissionString, ReactionEmoji, Role, Snowflake, StringResolvable, TextChannel, User, UserResolvable, VoiceStatus as VoiceState, Webhook } from 'discord.js';
+	import { Channel, Client, ClientDataResolver, ClientOptions, Collection, DMChannel, Emoji, Guild, GuildChannel, GuildMember, GuildResolvable, Message, MessageAttachment, MessageEmbed, MessageMentions, MessageOptions, MessageReaction, PermissionResolvable, PermissionString, ReactionEmoji, Role, Snowflake, StringResolvable, TextChannel, User, UserResolvable, VoiceStatus as VoiceState, Webhook } from 'discord.js';
 	import { Database as SQLiteDatabase, Statement as SQLiteStatement } from 'sqlite';
 	import { Database as SyncSQLiteDatabase, Statement as SyncSQLiteStatement } from 'SyncSqlite';
 
@@ -226,6 +226,8 @@ declare module 'discord.js-commando' {
 	export class CommandoClient extends Client {
 		public constructor(options?: CommandoClientOptions);
 
+		public publicResolver: ClientDataResolver;
+		
 		private _commandPrefix: string;
 
 		public commandPrefix: string;
